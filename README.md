@@ -7,7 +7,8 @@ The Note Taker is a Node/Express JS application that allows you to create and sa
 
 The notes are saved on the back-end in a file with the JSON format. 
 
-When the application is re-visited, the prior notes are loaded. You also have the option to delete any existing note.
+When the application is re-visited, the prior notes are loaded. You also have the option 
+to delete any existing notes.
 ```
 
 ## 🧰 Technologies Used
