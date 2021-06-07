@@ -41,21 +41,18 @@ app.delete('/api/notes/:id', (req, res) => {
         res.json(note);
       }
     })    
- 
-  });
-    
+  });   
 });
 
 // API Routes
 app.get('/api/notes', (req, res) => {
-  fs.readFile('./db.json', 'utf8', (err, jsonString) => {
+  readDB('./db.json',(err, note) => {
     if(err) {
-      console.log('Error reading file from disk!', err);
+      console.log(err);
+      return
     }
-    const notes = JSON.parse(jsonString);
-    res.json(notes);
+    res.json(note);
   });
-
 });
 
 // Reusable function for reading the database file. 
