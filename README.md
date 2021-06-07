@@ -1,9 +1,11 @@
-#  Note Taker
+#  Note Taker 
 ![header](./assets/images/header.jpg)
 
 ## 📝 Description
 ```
-The Note Taker is a Node/Express JS application that allows you to create and save notes. The notes are saved on the back-end in a file with the JSON format. 
+The Note Taker is a Node/Express JS application that allows you to create and save notes. 
+
+The notes are saved on the back-end in a file with the JSON format. 
 
 When the application is re-visited, the prior notes are loaded. You also have the option to delete any existing note.
 ```
@@ -31,9 +33,23 @@ You will need to install the latest version of [Node](https://nodejs.org/en/), [
 
 ## 📸 Screenshots
 
- > Below are screenshots of the deployed application.
+ > Below are screenshots and links of the deployed application.
+
+ **HOMEPAGE**
+
+![homepage](./assets/images/homepage.jpg)
+
+**NOTES PAGE**
 
 ![header](./assets/images/notes.jpg)
+
+## 🔗 Project Links
+
+[Note Taker Application](https://malmason.github.io/note-taker/)
+
+[Heroku Deployment](https://desolate-savannah-95009.herokuapp.com/)
+
+[Github Repository](https://github.com/malmason/note-taker)
 
 
 ## 📱 Contact 
