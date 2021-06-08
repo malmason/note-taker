@@ -13,10 +13,22 @@ app.use(express.json());
 // Add asset folder path so that the custom css and js files will link correctly on the client side.
 app.use(express.static(path.join(__dirname, '/assets')));
 
-// Display Routes
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, "index.html")));
 
+
+// API Routes
+app.get('/api/notes', (req, res) => {
+  readDB('./db.json',(err, note) => {
+    if(err) {
+      console.log(err);
+      return
+    }
+    res.json(note);
+  });
+});
+
+// Display Routes
 app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, "notes.html")));
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, "index.html")));
 
 app.delete('/api/notes/:id', (req, res) => {
 //  Capture the id of the note to delete
@@ -44,16 +56,7 @@ app.delete('/api/notes/:id', (req, res) => {
   });   
 });
 
-// API Routes
-app.get('/api/notes', (req, res) => {
-  readDB('./db.json',(err, note) => {
-    if(err) {
-      console.log(err);
-      return
-    }
-    res.json(note);
-  });
-});
+
 
 // Reusable function for reading the database file. 
 function readDB(filePath, cback) {
